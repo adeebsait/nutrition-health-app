@@ -1,0 +1,100 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FinalYear" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+<!--        <item name="android:windowLightStatusBar" tools:targetApi="m">?attr/isLightTheme</item>-->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!-- Customize your theme here. -->
+        <item name="textInputStyle">@style/DietInput.TextLayout</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <!--Text Input Layout-->
+    <style name="DietInput.TextLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.Large</item>
+    </style>
+
+    <!--Buttons Theme Start-->
+    <style name="DietApp.Button.Action.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/gradient_primary_rounded</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.Large</item>
+        <item name="android:height">@dimen/_56dp</item>
+<!--        <item name="android:paddingTop">@dimen/_8dp</item>-->
+<!--        <item name="android:paddingBottom">@dimen/_8dp</item>-->
+        <item name="android:paddingStart">@dimen/_48dp</item>
+        <item name="android:paddingEnd">@dimen/_48dp</item>
+    </style>
+
+    <style name="DietApp.Button.Action.Primary.OutLined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.Large</item>
+        <item name="android:paddingTop">@dimen/_16dp</item>
+        <item name="android:paddingBottom">@dimen/_16dp</item>
+        <item name="android:paddingStart">@dimen/_48dp</item>
+        <item name="android:paddingEnd">@dimen/_48dp</item>
+    </style>
+    <style name="ShapeAppearance.App.Large" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_12dp</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Button.TextButton" parent="">
+        <!--        <item name="colorPrimary">?attr/</item>-->
+    </style>
+
+    <style name="ThemeOverlay.App.Button" parent="">
+<!--        <item name="colorPrimary">@color/dark_gray</item>-->
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Button.OutLined" parent="">
+        <item name="colorPrimary">?attr/colorPrimary</item>
+        <item name="colorOnPrimary">?attr/colorPrimary</item>
+    </style>
+    <!--Button Themes Complete-->
+    <!--Button Themes Icon Only-->
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="cornerRadius">48dp</item>
+    </style>
+    <style name="Widget.App.Button.OutlinedButton.IconOnly.Square" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">42dp</item>
+        <item name="android:minHeight">42dp</item>
+        <item name="cornerRadius">4dp</item>
+    </style>
+    <style name="Widget.App.Button.NonOutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="cornerRadius">48dp</item>
+        <item name="strokeColor">@android:color/transparent</item>
+    </style>
+</resources>

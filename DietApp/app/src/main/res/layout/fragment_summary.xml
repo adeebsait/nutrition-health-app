@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_16dp"
+    tools:context=".ui.activityuser.presentation.SummaryFragment">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/prView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        tools:ignore="true">
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Calories"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Time"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Miles"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/caloriesLossTv"
+                style="@style/TextAppearance.MaterialComponents.Headline5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                tools:text="237" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/durationTv"
+                style="@style/TextAppearance.MaterialComponents.Headline5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="-h -M"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/distTv"
+                style="@style/TextAppearance.MaterialComponents.Headline5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0.0"
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.example.finalyear.common.utils.ActivityProgressView
+        android:id="@+id/prView"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:textSize="20sp"
+        app:background_line="@color/SecondaryColor"
+        app:background_line_width="@dimen/_2dp"
+        app:foreground_line="@color/red"
+        app:foreground_line_width="8dp"
+        app:foreground_progress="0"
+        app:layout_constraintBottom_toTopOf="@+id/counterStartBtn"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <com.example.finalyear.common.utils.DietMaterialButton
+        android:id="@+id/counterReset"
+        style="@style/DietApp.Button.Action.Primary.OutLined"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="@+id/counterStartBtn"
+        app:layout_constraintEnd_toStartOf="@+id/counterStartBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/counterStartBtn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/counterStartBtn"
+        style="@style/DietApp.Button.Action.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/counterReset"
+        app:layout_constraintTop_toBottomOf="@+id/prView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

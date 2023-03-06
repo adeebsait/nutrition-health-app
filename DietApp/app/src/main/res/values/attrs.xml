@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="background_line" format="color"/>
+    <attr name="background_line_width" format="dimension"/>
+    <attr name="foreground_line" format="color"/>
+    <attr name="foreground_line_width" format="dimension"/>
+    <attr name="foreground_progress" format="integer"/>
+    <declare-styleable name="DietProgressView">
+        <attr name="background_line"/>
+        <attr name="background_line_width" />
+        <attr name="foreground_line"/>
+        <attr name="foreground_line_width"/>
+        <attr name="foreground_progress"/>
+    </declare-styleable>
+    <declare-styleable name="ActivityProgressView">
+        <attr name="background_line"/>
+        <attr name="background_line_width" />
+        <attr name="foreground_line"/>
+        <attr name="foreground_line_width"/>
+        <attr name="foreground_progress"/>
+    </declare-styleable>
+</resources>

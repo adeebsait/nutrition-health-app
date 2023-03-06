@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option java_package = "com.example.finalyear";
+option java_multiple_files = true;
+
+message UserData {
+  string email = 1;
+  string uuid = 2;
+  UserInfo info = 3;
+  Activities activities = 4;
+  Counter counter = 5;
+}
+
+message UserInfo{
+  string firstName = 1;
+  string lastName = 2;
+  string dob = 3;
+  string gender = 4;
+  Height height = 5;
+  Weight weight = 6;
+}
+message Height{
+  int32 ft = 1;
+  int32 in = 2;
+}
+message Weight{
+  int32 kg = 1;
+  int32 gm = 2;
+}
+
+message Activities{
+  string goalText = 1;
+  string baselineActivity = 2;
+  int32 goal = 3;
+  int32 calories = 4;
+}
+
+message Counter{
+  int32 steps = 1;
+  int64 duration = 2;
+  int32 caloriesburn = 3;
+  int64 date = 4;
+  int32 running = 5;
+}

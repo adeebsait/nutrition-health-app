@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_16dp"
+    tools:context=".ui.authentication.presentation.SignUpOptionsFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/signupOptWelcomeTV"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        app:layout_constraintBottom_toTopOf="@+id/signupOptContinueBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signupOptContinueBtn"
+        style="@style/DietApp.Button.Action.Primary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/_196dp"
+        android:text="@string/_continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/signupOtpGuidelineLeft"
+        app:layout_constraintStart_toStartOf="@+id/signupOtpGuidelineRight"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/signupOptDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2dp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:elevation="@dimen/_0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupOptContinueBtn" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/_16dp"
+        android:text="@string/or"
+        app:layout_constraintBottom_toBottomOf="@+id/signupOptDivider"
+        app:layout_constraintEnd_toEndOf="@+id/signupOptDivider"
+        app:layout_constraintStart_toStartOf="@+id/signupOptDivider"
+        app:layout_constraintTop_toTopOf="@+id/signupOptDivider" />
+
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly.Square"
+        app:iconPadding="@dimen/_0dp"
+        app:iconGravity="textStart"
+        app:icon="@drawable/ic_facebook"
+        app:iconTint="@null"
+        android:id="@+id/signupOptFbBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/_40dp"
+        app:layout_constraintEnd_toStartOf="@+id/signupOptGlBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupOptDivider" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly.Square"
+        app:icon="@drawable/ic_google"
+        app:iconTint="@null"
+        android:id="@+id/signupOptGlBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:iconPadding="@dimen/_0dp"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="@+id/signupOptFbBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/signupOptFbBtn"
+        app:layout_constraintTop_toTopOf="@+id/signupOptFbBtn" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/signupOtpGuidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15"
+        tools:ignore="true" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/signupOtpGuidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"
+        tools:ignore="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

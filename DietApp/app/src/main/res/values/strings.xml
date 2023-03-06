@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Final year</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="or">OR</string>
+    <string name="email_placeholder">Email</string>
+    <string name="password">Password</string>
+    <string name="recipe_ngenerator">Recipe\nGenerator</string>
+    <string name="inventory">Inventory</string>
+    <string name="scan_food">Scan\nFood</string>
+    <string name="activity">Activity</string>
+    <string name="default_notification_channel_id">Diet App Notification</string>
+    <string name="summaray_notification_title">Today\'s Step</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
+    <string name="submit">Submit</string>
+    <string name="calories">Calories</string>
+    <string name="logout">Logout</string>
+    <string name="welcome">WELCOME</string>
+    <string name="_continue">CONTINUE</string>
+    <string name="add_to_inventory">Add To Inventory</string>
+    <string name="expires_on">Expires On</string>
+    <string name="foodname">Food Name</string>
+    <string name="scan_item">Scan Item</string>
+    <string name="quantity">Quantity</string>
+    <string name="inventory_added_success">Inventory Item Added Successfully</string>
+    <string name="food_ingredient">Food Ingredient</string>
+    <string name="cook">Cook</string>
+    <string name="your_current_step_goals">Your Current Step Goals</string>
+    <string name="amount_of_sugar">Amount of Sugar</string>
+    <string name="step_goal">Step Goal</string>
+    <string-array name="_units">
+        <item>Kilogram (kg)</item>
+        <item>Gram (g)</item>
+        <item>Milligram (mg)</item>
+        <item>Ton (t)</item>
+        <item>Pound (lb)</item>
+        <item>Ounce (oz)</item>
+        <item>Liter (L)</item>
+        <item>Milliliter (mL)</item>
+        <item>Gallon (gal)</item>
+        <item>Quart (qt)</item>
+        <item>Pint (pt)</item>
+        <item>Cup (cup)</item>
+        <item>Fluid Ounce (fl oz)</item>
+        <item>Tablespoon (tbsp)</item>
+        <item>Teaspoon (tsp)</item>
+        <item>Pinch</item>
+        <item>Dash</item>
+        <item>Drops</item>
+        <item>Handful</item>
+        <item>Bunch</item>
+        <item>Clove</item>
+        <item>Tablespoon (tbsp)</item>
+        <item>Teaspoon (tsp)</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="goals">
+        <item>Weight Gain</item>
+        <item>Weight Loss</item>
+        <item>Weight Maintenance</item>
+    </string-array>
+    <string-array name="basline_activity">
+        <item>Sedentary</item>
+        <item>Lightly active</item>
+        <item>Moderately active</item>
+        <item>Very active</item>
+    </string-array>
+</resources>

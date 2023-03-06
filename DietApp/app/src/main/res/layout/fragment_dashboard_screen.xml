@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.presentation.dashboard.DashboardFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/dashboardSlider"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@color/white"
+                android:paddingVertical="@dimen/_16dp"
+                android:paddingEnd="@dimen/_8dp"
+                android:paddingStart="@dimen/_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                android:id="@+id/sliderIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                app:dampingRatio="0.5"
+                app:dotsColor="?attr/colorPrimary"
+                app:dotsCornerRadius="@dimen/_8dp"
+                app:dotsSize="16dp"
+                app:dotsSpacing="6dp"
+                app:dotsStrokeColor="?attr/colorPrimary"
+                app:dotsStrokeWidth="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dashboardSlider"
+                app:stiffness="300" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_marginTop="@dimen/_8dp"
+                android:columnCount="2"
+                android:padding="@dimen/_16dp"
+                android:orientation="horizontal"
+                android:useDefaultMargins="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sliderIndicator">
+
+                <TextView
+                    android:id="@+id/dashboardScanFoodTv"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_148dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/item_dashboard"
+                    android:gravity="center"
+                    android:text="@string/scan_food" />
+
+                <TextView
+                    android:id="@+id/dashboardInventoryTv"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_148dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/item_dashboard"
+                    android:gravity="center"
+                    android:text="@string/inventory" />
+
+                <TextView
+                    android:id="@+id/dashboardRecipeGenTv"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_148dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/item_dashboard"
+                    android:gravity="center"
+                    android:text="@string/recipe_ngenerator" />
+
+                <TextView
+                    android:id="@+id/dashboardActivityTv"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_148dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/item_dashboard"
+                    android:gravity="center"
+                    android:text="@string/activity" />
+
+            </GridLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/infoFormScreenFragment"
+        android:name="com.example.finalyear.ui.authentication.presentation.InfoFormScreenFragment"
+        android:label="@string/sign_up"
+        tools:layout="@layout/fragment_sign_up_form_screen">
+        <action
+            android:id="@+id/action_signUpFormScreenFragment_to_goalsScreenFragment"
+            app:destination="@id/goalsScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalsScreenFragment"
+        android:name="com.example.finalyear.ui.additionalinfo.presentation.GoalsScreenFragment"
+        android:label="Goals"
+        tools:layout="@layout/fragment_goals_screen" >
+        <action
+            android:id="@+id/action_goalsScreenFragment_to_homeFragments"
+            app:destination="@id/homeFragments"
+            app:popUpTo="@id/authEntryFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/authEntryFragment"
+        android:name="com.example.finalyear.ui.authentication.presentation.AuthEntryFragment"
+        android:label="fragment_auth_entry"
+        tools:layout="@layout/fragment_auth_entry" >
+        <action
+            android:id="@+id/action_authEntryFragment_to_loginScreenFragment"
+            app:destination="@id/loginScreenFragment" />
+        <action
+            android:id="@+id/action_authEntryFragment_to_signUpOptionsFragment"
+            app:destination="@id/signUpFragments" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreenFragment"
+        android:name="com.example.finalyear.ui.authentication.presentation.LoginScreenFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreenFragment_to_homeFragments"
+            app:destination="@id/homeFragments"
+            app:popUpTo="@id/authEntryFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginScreenFragment_to_signUpFormScreenFragment"
+            app:destination="@id/infoFormScreenFragment" />
+        <action
+            android:id="@+id/action_loginScreenFragment_to_goalsScreenFragment"
+            app:destination="@id/goalsScreenFragment" />
+    </fragment>
+    <navigation android:id="@+id/scanFragments"
+        app:startDestination="@id/scannerFragment">
+        <fragment
+            android:id="@+id/scanSavedFragment"
+            android:name="com.example.finalyear.ui.foodscanner.presentation.ScanSavedFragment"
+            android:label="Saved Item"
+            tools:layout="@layout/fragment_scan_saved" />
+        <fragment
+            android:id="@+id/scannerFragment"
+            android:name="com.example.finalyear.ui.foodscanner.presentation.ScannerFragment"
+            android:label="Scanner"
+            tools:layout="@layout/fragment_scanner" />
+        <fragment
+            android:id="@+id/scanHistoryFragment"
+            android:name="com.example.finalyear.ui.foodscanner.presentation.ScanHistoryFragment"
+            android:label="Scan History"
+            tools:layout="@layout/fragment_scan_history" />
+        <action
+            android:id="@+id/action_global_scanResultFragment"
+            app:destination="@id/scanResultFragment"/>
+    </navigation>
+
+    <navigation android:id="@+id/recipeFragments"
+        app:startDestination="@id/recipeGeneratorFragment">
+        <fragment
+            android:id="@+id/chooseIngredientItemsFragment"
+            android:name="com.example.finalyear.ui.recipegenerator.presentation.takerecipe.ChooseIngredientItemsFragment"
+            android:label="Select Ingredients"
+            tools:layout="@layout/fragment_choose_ingredient_items" >
+            <argument
+                android:name="details"
+                app:argType="com.example.finalyear.ui.recipegenerator.data.recipepojos.RecipeDetails" />
+        </fragment>
+        <fragment
+            android:id="@+id/recipeTakeFragment"
+            android:name="com.example.finalyear.ui.recipegenerator.presentation.takerecipe.RecipeTakeFragment"
+            android:label="Recipe Taken"
+            tools:layout="@layout/fragment_recipe_take" />
+        <fragment
+            android:id="@+id/recipesMatchedInventoryFragment"
+            android:name="com.example.finalyear.ui.recipegenerator.presentation.matchedinventory.RecipesMatchedInventoryFragment"
+            android:label="Matched Recipes"
+            tools:layout="@layout/fragment_recipes_matched_inventory" />
+        <fragment
+            android:id="@+id/recipeDetailFragment"
+            android:name="com.example.finalyear.ui.recipegenerator.presentation.recipedetails.RecipeDetailFragment"
+            android:label="Recipe\'s Detail"
+            tools:layout="@layout/fragment_recipe_detail">
+            <argument
+                android:name="details"
+                app:argType="com.example.finalyear.ui.recipegenerator.data.recipepojos.RecipeDetails" />
+        </fragment>
+        <fragment
+            android:id="@+id/recipeGeneratorFragment"
+            android:name="com.example.finalyear.ui.recipegenerator.presentation.recipegenerator.RecipeGeneratorFragment"
+            android:label="Recipe Generator"
+            tools:layout="@layout/fragment_recipe_generator" />
+        <fragment
+            android:id="@+id/recipeSaveListFragment"
+            android:name="com.example.finalyear.ui.recipegenerator.presentation.savelists.RecipeSaveListFragment"
+            android:label="Saved Recipe"
+            tools:layout="@layout/fragment_recipe_saved" />
+        <action android:id="@+id/action_global_recipeDetailFragment" app:destination="@id/recipeDetailFragment" />
+        <action
+            android:id="@+id/action_global_recipeTakeFragment"
+            app:destination="@id/recipeTakeFragment"
+            app:popUpTo="@id/recipeFragments" /><action android:id="@+id/action_global_chooseIngredientItemsFragment" app:destination="@id/chooseIngredientItemsFragment"/>
+    </navigation>
+    <navigation android:id="@+id/inventoryFragments"
+        app:startDestination="@id/inventoryListFragment">
+        <dialog
+            android:id="@+id/inventoryDialogFragment"
+            android:name="com.example.finalyear.ui.inventory.presentation.InventoryDialogFragment"
+            android:label="dialog_inventory"
+            tools:layout="@layout/dialog_inventory">
+            <argument
+                android:name="itemdata"
+                app:argType="com.example.finalyear.ui.inventory.data.InventoryItem"
+                app:nullable="true" />
+        </dialog>
+        <fragment
+            android:id="@+id/toBuyScreenFragment"
+            android:name="com.example.finalyear.ui.inventory.presentation.ToBuyScreenFragment"
+            android:label="Items To Buy"
+            tools:layout="@layout/fragment_to_buy_screen" />
+        <fragment
+            android:id="@+id/inventoryListFragment"
+            android:name="com.example.finalyear.ui.inventory.presentation.InventoryListFragment"
+            android:label="Inventory"
+            tools:layout="@layout/fragment_inventory_list">
+            <action
+                android:id="@+id/action_inventoryListFragment_to_inventoryDialogFragment"
+                app:destination="@id/inventoryDialogFragment" />
+        </fragment>
+    </navigation>
+    <navigation android:id="@+id/activityFragments"
+        app:startDestination="@id/summaryFragment">
+        <fragment
+            android:id="@+id/gpsFragment"
+            android:name="com.example.finalyear.ui.activityuser.presentation.GpsFragment"
+            android:label="Gps"
+            tools:layout="@layout/fragment_gps" />
+        <fragment
+            android:id="@+id/summaryFragment"
+            android:name="com.example.finalyear.ui.activityuser.presentation.SummaryFragment"
+            android:label="Summary"
+            tools:layout="@layout/fragment_summary" />
+    </navigation>
+    <navigation android:id="@+id/homeFragments"
+        app:startDestination="@id/dashboardFragment">
+        <dialog
+            android:id="@+id/stepGoalDialog"
+            android:name="com.example.finalyear.ui.home.presentation.settings.StepGoalDialog"
+            android:label="fragment_step_goal_dialog"
+            tools:layout="@layout/fragment_step_goal_dialog" />
+        <fragment
+            android:id="@+id/dashboardFragment"
+            android:name="com.example.finalyear.ui.home.presentation.dashboard.DashboardFragment"
+            android:label="Home"
+            tools:layout="@layout/fragment_dashboard_screen"/>
+        <fragment
+            android:id="@+id/feedFragment"
+            android:name="com.example.finalyear.ui.home.presentation.feed.FeedFragment"
+            android:label="Feed"
+            tools:layout="@layout/fragment_feed" />
+        <fragment
+            android:id="@+id/settingFragment"
+            android:name="com.example.finalyear.ui.home.presentation.settings.SettingFragment"
+            android:label="Settings"
+            tools:layout="@layout/fragment_setting" >
+            <action
+                android:id="@+id/action_settingFragment_to_authEntryFragment"
+                app:destination="@id/authEntryFragment"
+                app:popUpTo="@id/homeFragments"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_settingFragment_to_stepGoalDialog"
+                app:destination="@id/stepGoalDialog" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_to_recipe"
+            app:destination="@id/recipeFragments"
+            app:popUpToSaveState="true"/>
+        <action
+            android:id="@+id/action_global_to_scanfragments"
+            app:destination="@id/scanFragments" />
+        <action
+            android:id="@+id/action_global_to_inventory"
+            app:destination="@id/inventoryFragments" />
+        <action
+            android:id="@+id/action_global_to_activityFragments"
+            app:destination="@id/activityFragments" />
+    </navigation>
+    <navigation android:id="@+id/signUpFragments"
+        app:startDestination="@id/signUpOptionsFragment">
+        <fragment
+            android:id="@+id/signupScreenFragment"
+            android:name="com.example.finalyear.ui.authentication.presentation.SignupScreenFragment"
+            android:label="SignUp Screen"
+            tools:layout="@layout/fragment_signup_screen">
+            <action
+                android:id="@+id/action_signupScreenFragment_to_infoFormScreenFragment"
+                app:destination="@id/infoFormScreenFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/signUpOptionsFragment"
+            android:name="com.example.finalyear.ui.authentication.presentation.SignUpOptionsFragment"
+            android:label="fragment_sign_up_options"
+            tools:layout="@layout/fragment_sign_up_options">
+            <action
+                android:id="@+id/action_signUpOptionsFragment_to_signupScreenFragment"
+                app:destination="@id/signupScreenFragment" />
+            <action
+                android:id="@+id/action_signUpOptionsFragment_to_infoFormScreenFragment"
+                app:destination="@id/infoFormScreenFragment" />
+        </fragment>
+    </navigation>
+    <fragment
+        android:id="@+id/scanResultFragment"
+        android:name="com.example.finalyear.ui.foodscanner.presentation.ScanResultFragment"
+        android:label="Scanned Food"
+        tools:layout="@layout/fragment_scan_result">
+        <argument
+            android:name="foodcode"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="item"
+            app:argType="com.example.finalyear.ui.inventory.data.InventoryItem"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.finalyear.ui.splash.presentation.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_authEntryFragment"
+            app:destination="@id/authEntryFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragments"
+            app:destination="@id/homeFragments"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

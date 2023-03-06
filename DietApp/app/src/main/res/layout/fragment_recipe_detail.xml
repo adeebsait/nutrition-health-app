@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.recipegenerator.presentation.recipedetails.RecipeDetailFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/materialDivider"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:transitionName="img"
+                android:id="@+id/sheetImageview"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/sheetCalorieText"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8dp"
+                android:background="@drawable/gradient_primary_rounded"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_8dp"
+                android:paddingVertical="@dimen/_2dp"
+                android:textColor="?attr/colorOnPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/sheetImageview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/sheetImageview">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/recipeHeadline"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_16dp"
+                    android:textAlignment="center"
+                    tools:text="Recipe Name" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recipeDetailRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_8dp"
+        app:layout_constraintBottom_toTopOf="@+id/recipeTakenBtn"
+        tools:ignore="true" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/recipeSaveToogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/recipeTakenBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recipeTakenBtn">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveRecipeBtn"
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:icon="@drawable/fav" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.example.finalyear.common.utils.DietMaterialButton
+        android:id="@+id/recipeTakenBtn"
+        style="@style/DietApp.Button.Action.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_8dp"
+        android:text="Take This"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/recipeSaveToogle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

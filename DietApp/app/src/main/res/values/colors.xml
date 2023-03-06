@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFF</color>
+    <color name="mainColor">#F19969</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <!--Light Theme-->
+    <color name="backgroundColor_light">#FFFFFF</color>
+    <color name="lightColor_light">#252525</color>
+    <color name="lineColor_light">#CBF8F8F8</color>
+    <color name="tintColor_light">#000000</color>
+    <color name="cardItemColor_light">#80FFFFFF</color>
+    <color name="cardBackgroundColor_light">#FFFFFF</color>
+    <color name="item_light">#EDEDED</color>
+    <color name="textGray_light">#353535</color>
+
+    <!--Dark Theme-->
+    <color name="backgroundColor_dark">#242424</color>
+    <color name="lineColor_dark">#222222</color>
+    <color name="lightColor_dark">#E6E6E6</color>
+    <color name="tintColor_dark">#FFFFFF</color>
+    <color name="cardItemColor_dark">#80191919</color>
+    <color name="item_dark">#303030</color>
+    <color name="cardBackgroundColor_dark">#242424</color>
+    <color name="textGray_dark">#B5B5B5</color>
+
+
+    <color name="purple">#6f32c3</color>
+    <color name="blue">#2196F3</color>
+    <color name="orange">#FF9800</color>
+
+    <color name="purpleLight">#A662FF</color>
+
+    <color name="darkGray">#202020</color>
+
+    <color name="colorPrimary">#5EB7FF</color>
+    <color name="colorPrimaryDark">#4076b2</color>
+    <color name="colorAccent">#4076b2</color>
+    <item name="title_bg" type="color">#2c5aa9</item>
+    <color name="mainStart">#164185</color>
+    <color name="SecondaryColor">#d3d2d1</color>
+    <color name="SecondaryTextColor">#ffffff</color>
+    <color name="HighRiskColor">#e74c3c</color>
+    <color name="MediumRiskColor">#ff933c</color>
+    <color name="ProtectedRiskColor">#71b867</color>
+    <color name="fix_screen_progressbar_rim_bg_color">#ffffffff</color>
+    <color name="color_BackgroundAnimationProgress">#4B4F5E</color>
+    <color name="black55">#55000000</color>
+    <item name="drawer_bg_color_divide" type="color">#243040</item>
+    <color name="colorAccent2">#1f9929</color>
+    <color name="bright_red">#f22723</color>
+    <color name="dark_gray">#ff999999</color>
+    <color name="DividerColor">#4B4F5E</color>
+    <color name="info_icon_bottom_text">#726D6C</color>
+    <color name="black_gray">#2c2c2e</color>
+    <item name="gray" type="color">#323a45</item>
+    <color name="card_normal">#e6ffffff</color>
+    <color name="white55">#55eeeeee</color>
+    <color name="mainEnd">#4076b2</color>
+    <color name="primary">#E43F3F</color>
+    <color name="accent">#FFFFFF</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="red">#F04C63</color>
+
+    <color name="_2">#494CFF</color>
+    <color name="_3">#7AE6FF</color>
+    <color name="border">#eeeeee</color>
+
+</resources>

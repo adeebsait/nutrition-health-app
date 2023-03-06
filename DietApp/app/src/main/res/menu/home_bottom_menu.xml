@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/dashboard"
+        android:title="Dashboard"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/feedFragment"
+        android:icon="@drawable/feed"
+        android:title="Feed"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/settings"
+        android:title="Settings"
+        app:showAsAction="always" />
+</menu>

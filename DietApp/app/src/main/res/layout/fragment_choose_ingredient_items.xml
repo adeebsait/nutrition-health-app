@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.recipegenerator.presentation.takerecipe.ChooseIngredientItemsFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chooseIngredRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/pIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/gradient_primary_rounded"
+        android:elevation="@dimen/_2dp"
+        android:indeterminate="true"
+        android:padding="@dimen/_16dp"
+        app:indicatorColor="?attr/colorOnPrimary" />
+
+    <com.example.finalyear.common.utils.DietMaterialButton
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:id="@+id/cookRecipeButton"
+        style="@style/DietApp.Button.Action.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cook"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/_32dp"
+    android:paddingVertical="@dimen/_8dp"
+    tools:context=".ui.authentication.presentation.LoginScreenFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loginEmailInputLay"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8dp"
+        app:layout_constraintBottom_toTopOf="@+id/signupInputPassLay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginEmailInputEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_placeholder"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signupInputPassLay"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16dp"
+        app:layout_constraintBottom_toTopOf="@+id/loginSubmitBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginInputPassEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.example.finalyear.common.utils.DietMaterialButton
+        android:id="@+id/loginSubmitBtn"
+        style="@style/DietApp.Button.Action.Primary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/_196dp"
+        android:text="@string/login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ThemeOverlay.App.Button.TextButton" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/signupOptDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2dp"
+        android:layout_marginTop="@dimen/_40dp"
+        android:elevation="@dimen/_0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginSubmitBtn" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/_16dp"
+        android:text="@string/or"
+        app:layout_constraintBottom_toBottomOf="@+id/signupOptDivider"
+        app:layout_constraintEnd_toEndOf="@+id/signupOptDivider"
+        app:layout_constraintStart_toStartOf="@+id/signupOptDivider"
+        app:layout_constraintTop_toTopOf="@+id/signupOptDivider" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly.Square"
+        app:iconPadding="@dimen/_0dp"
+        app:iconGravity="textStart"
+        app:icon="@drawable/ic_facebook"
+        app:iconTint="@null"
+        android:id="@+id/loginOptFbBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/_40dp"
+        app:layout_constraintEnd_toStartOf="@+id/loginOptGlBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupOptDivider" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly.Square"
+        app:icon="@drawable/ic_google"
+        app:iconTint="@null"
+        android:id="@+id/loginOptGlBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:iconPadding="@dimen/_0dp"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="@+id/loginOptFbBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/loginOptFbBtn"
+        app:layout_constraintTop_toTopOf="@+id/loginOptFbBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

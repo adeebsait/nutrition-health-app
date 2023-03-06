@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/_16dp"
+    android:gravity="center"
+    tools:context=".ui.additionalinfo.presentation.GoalsScreenFragment">
+<com.google.android.material.textview.MaterialTextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="GOALS"
+    style="@style/TextAppearance.MaterialComponents.Headline6"
+    android:gravity="center"/>
+    <Space
+        android:id="@+id/space1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56dp"
+        tools:ignore="true" />
+<com.google.android.material.textview.MaterialTextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="What is your goal?"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/goalInputLay"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        app:expandedHintEnabled="false"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            app:simpleItems="@array/goals"
+            android:id="@+id/goalInputEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_16dp"
+        tools:ignore="true" />
+<com.google.android.material.textview.MaterialTextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="What is your baseline activity?"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/baslineActInputLay"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        app:expandedHintEnabled="false"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            app:simpleItems="@array/basline_activity"
+            android:id="@+id/baslineActInputEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Space
+        android:id="@+id/space5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_16dp"
+        tools:ignore="true" />
+    <com.example.finalyear.common.utils.DietMaterialButton
+        android:id="@+id/goalsSubmitBtn"
+        style="@style/DietApp.Button.Action.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintBottom_toTopOf="@+id/space7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</LinearLayout>
