@@ -50,11 +50,13 @@
                 android:layout_gravity="fill"
                 android:layout_marginTop="@dimen/_8dp"
                 android:columnCount="2"
-                android:padding="@dimen/_16dp"
                 android:orientation="horizontal"
+                android:padding="@dimen/_16dp"
                 android:useDefaultMargins="true"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/sliderIndicator">
+                app:layout_constraintTop_toBottomOf="@id/sliderIndicator"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_editor_absoluteX="-41dp">
 
                 <TextView
                     android:id="@+id/dashboardScanFoodTv"
@@ -91,6 +93,16 @@
 
                 <TextView
                     android:id="@+id/dashboardActivityTv"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_148dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/item_dashboard"
+                    android:gravity="center"
+                    android:text="@string/activity" />
+
+                <TextView
+                    android:id="@+id/dashboardARSugarTv"
                     style="@style/TextAppearance.MaterialComponents.Body1"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/_148dp"
